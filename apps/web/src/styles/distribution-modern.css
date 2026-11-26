@@ -1,0 +1,141 @@
+.distribution-redesign {
+  display: grid;
+  gap: 14px;
+  padding: 12px 0 16px;
+  flex: 1;
+}
+.distribution-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.resolution-score {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  color: #666;
+  font-size: 1rem;
+}
+.resolution-score > strong {
+  font-size: 2.75rem;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  color: #202020;
+  font-variant-numeric: tabular-nums;
+}
+.resolution-score strong span {
+  font-size: 1.25rem;
+  margin-left: 3px;
+  color: #777;
+}
+.distribution-total {
+  font-size: 0.875rem;
+  color: #666;
+  padding: 6px 10px;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+.distribution-track {
+  display: flex;
+  height: 16px;
+  gap: 4px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+.distribution-track > span {
+  min-width: 4px;
+  border-radius: 3px;
+  background-image: repeating-linear-gradient(
+    110deg,
+    transparent,
+    transparent 5px,
+    #ffffff18 5px,
+    #ffffff18 6px
+  ) !important;
+}
+.distribution-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+.distribution-tiles button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  background: #fafafa;
+  text-align: start;
+  transition:
+    background-color 150ms,
+    border-color 150ms;
+}
+.distribution-tiles button:hover,
+.distribution-tiles button:focus-visible {
+  background: #f0f0f0;
+  border-color: #888;
+}
+.distribution-tile-label {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: #555;
+  overflow-wrap: break-word;
+}
+.distribution-tile-label i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.distribution-tiles strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.375rem;
+  line-height: 1.2;
+  color: #222;
+  font-variant-numeric: tabular-nums;
+}
+.distribution-tiles strong svg {
+  color: #999;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .distribution-track > span {
+    animation: distribution-reveal 500ms ease-out both;
+    transform-origin: left;
+  }
+  .distribution-tiles button:active {
+    transform: scale(0.96);
+    transition: transform 150ms ease-out;
+  }
+}
+@keyframes distribution-reveal {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@media (max-width: 1400px) {
+  .distribution-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .distribution-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .distribution-summary {
+    flex-wrap: wrap;
+  }
+}

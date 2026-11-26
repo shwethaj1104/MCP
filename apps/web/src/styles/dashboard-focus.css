@@ -1,0 +1,182 @@
+/* One interactive filter area; workflow and distribution provide read-only context. */
+.queue-panel {
+  overflow: visible;
+}
+.queue-panel .queue-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 24px;
+  border-top: 1px solid #eee;
+}
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #666;
+}
+.pagination-controls .custom-select {
+  width: 88px;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+.pagination-controls .select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+}
+.pagination-controls .select-popover {
+  min-width: 112px;
+  left: auto;
+  right: 0;
+}
+.pagination-controls .select-option {
+  min-height: 40px;
+  padding: 8px 10px;
+  gap: 12px;
+}
+.pagination-controls .select-option strong,
+.pagination-controls .select-value > strong {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+.pagination-controls .select-check {
+  width: 18px;
+  height: 18px;
+}
+.pagination-controls > button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 0.9375rem;
+  color: #333;
+}
+.pagination-controls > button:disabled {
+  color: #999;
+  background: #f8f8f8;
+  cursor: not-allowed;
+}
+.pagination-controls > button:not(:disabled):hover {
+  background: #e7e7e7;
+}
+.page-indicator {
+  min-width: 48px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.queue-panel .queue-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+}
+.queue-panel .queue-header-actions .search {
+  width: 280px;
+  max-width: 100%;
+}
+.queue-panel .queue-header-actions .queue-refresh {
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  .queue-panel .panel-heading {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .queue-panel .queue-header-actions {
+    width: 100%;
+  }
+  .queue-panel .queue-header-actions .search {
+    flex: 1;
+    width: auto;
+  }
+}
+.dashboard-content .metric::before {
+  display: none;
+}
+.dashboard-content .metric.is-selected {
+  background: #e7e7e7;
+  border-color: #aaa;
+  box-shadow: inset 0 0 0 1px #aaa;
+}
+.dashboard-content .metric.is-selected > div,
+.dashboard-content .metric.is-selected p {
+  color: #444;
+}
+.dashboard-content .metric:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 3px;
+}
+.workflow-overview .pipeline-stages .workflow-node {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 10px;
+  padding: 10px 12px;
+  border-left: 2px solid #ddd;
+}
+.workflow-node .pipeline-stage-number {
+  grid-column: 1 / -1;
+  color: #888;
+}
+.dashboard-content .workflow-overview .pipeline-stages {
+  gap: 20px 12px;
+}
+.distribution-redesign {
+  gap: 16px;
+}
+.distribution-bars {
+  display: grid;
+  gap: 10px;
+}
+.distribution-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #555;
+}
+.distribution-row strong {
+  font-size: 1rem;
+  text-align: right;
+  color: #222;
+  font-variant-numeric: tabular-nums;
+}
+.distribution-row-track {
+  display: block;
+  height: 7px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.distribution-row-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+.queue-filter-caption {
+  font-size: 0.9375rem;
+  color: #666;
+}
+.dashboard-content .queue-panel .table-tools {
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .distribution-row {
+    grid-template-columns: 120px minmax(0, 1fr) 24px;
+    gap: 8px;
+  }
+}

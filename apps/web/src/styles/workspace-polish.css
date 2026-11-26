@@ -1,0 +1,226 @@
+/* Focused workspace screens share dashboard density, typography and controls. */
+.transactions-workspace .transaction-summary {
+  padding: 20px 24px;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.transactions-workspace .smallcaps {
+  font-size: 0.75rem;
+  color: #777;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.transactions-workspace .transaction-summary strong,
+.transactions-workspace .ledger-intro h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.transactions-workspace .transaction-summary small,
+.transactions-workspace .ledger-intro h2 > span {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #777;
+}
+.transactions-workspace .ledger-emblem {
+  width: 44px;
+  height: 48px;
+}
+.transaction-panel,
+.activity-workspace {
+  overflow: visible;
+}
+.transaction-panel .panel-heading,
+.activity-workspace .panel-heading {
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.transaction-panel .panel-heading h2,
+.activity-workspace .panel-heading h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.transaction-panel .table-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 24px 16px;
+}
+.transaction-panel .tabs {
+  flex-wrap: wrap;
+}
+.transaction-panel .tabs button {
+  font-size: 0.875rem;
+  padding: 10px 14px;
+  line-height: 1.5;
+}
+.transaction-panel .tabs button.selected {
+  background: #e7e7e7;
+  color: #222;
+  box-shadow: inset 0 0 0 1px #bbb;
+}
+.transaction-result-count {
+  font-size: 0.8125rem;
+  color: #777;
+}
+.transaction-panel table {
+  min-width: 760px;
+}
+.transaction-panel th {
+  font-size: 0.8125rem;
+  color: #666;
+  padding: 14px 24px;
+}
+.transaction-panel td {
+  font-size: 0.9375rem;
+  padding: 14px 24px;
+  line-height: 1.5;
+}
+.transaction-panel .case-identity strong {
+  font-size: 0.9375rem;
+}
+.transaction-panel td small,
+.transaction-panel .account-ref,
+.transaction-panel .badge {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.transaction-panel .merchant-initial {
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+}
+.transaction-panel .queue-pagination,
+.activity-workspace .queue-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 24px;
+  border-top: 1px solid #eee;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.activity-column-head,
+.activity-entry {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) minmax(180px, 0.65fr) 20px;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 24px;
+}
+.activity-column-head {
+  font-size: 0.8125rem;
+  color: #777;
+  background: #f8f8f8;
+  border-block: 1px solid #eee;
+}
+.activity-entry {
+  width: 100%;
+  min-height: 86px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  background: white;
+  text-align: start;
+  transition: background-color 150ms;
+}
+.activity-entry:last-child {
+  border-bottom: 0;
+}
+.activity-entry:hover {
+  background: #f5f5f5;
+  transform: none;
+}
+.activity-entry:focus-visible {
+  outline: 2px solid #444;
+  outline-offset: -3px;
+}
+.activity-date,
+.activity-case > span:last-child {
+  display: grid;
+  gap: 4px;
+}
+.activity-date strong {
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: #555;
+}
+.activity-date > span,
+.activity-case small {
+  font-size: 0.8125rem;
+  color: #777;
+}
+.activity-case {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.activity-case strong {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-weight: 650;
+  color: #333;
+}
+.activity-case small {
+  overflow-wrap: anywhere;
+}
+.activity-case-icon {
+  width: 36px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e2e2;
+  border-radius: 9px;
+  background: #f8f8f8;
+  color: #777;
+}
+.activity-status .badge {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.activity-open {
+  color: #888;
+}
+@media (max-width: 750px) {
+  .transaction-panel .panel-heading,
+  .activity-workspace .panel-heading {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+  .activity-column-head {
+    display: none;
+  }
+  .activity-entry {
+    grid-template-columns: minmax(0, 1fr) 20px;
+    gap: 10px;
+    padding: 16px;
+  }
+  .activity-date {
+    grid-column: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .activity-case {
+    grid-column: 1;
+  }
+  .activity-status {
+    grid-column: 1;
+  }
+  .activity-open {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .transaction-panel .case-search,
+  .activity-workspace .case-search {
+    flex-basis: 100%;
+  }
+}

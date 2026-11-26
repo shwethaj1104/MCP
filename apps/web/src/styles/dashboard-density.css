@@ -1,0 +1,140 @@
+/* Prioritize the case queue while preserving readable dashboard typography. */
+.dashboard-content {
+  padding-top: 22px;
+  padding-bottom: 24px;
+}
+.dashboard-content > .heading {
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+.dashboard-content > .heading h1 {
+  margin-top: 6px;
+  font-size: clamp(1.75rem, 2.1vw, 2.25rem);
+}
+.dashboard-content > .heading p {
+  margin-top: 6px;
+}
+.dashboard-content .overview-composition {
+  margin-bottom: 16px;
+}
+.dashboard-content .metrics {
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.dashboard-content .metric {
+  min-height: 0;
+  padding: 16px 20px;
+}
+.dashboard-content .metric strong {
+  margin: 12px 0 6px;
+  font-size: 2.25rem;
+}
+.dashboard-content .metric p {
+  margin-bottom: 0;
+}
+.dashboard-content .metric-tag {
+  display: none;
+}
+.dashboard-content .analytics-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 0;
+  align-items: stretch;
+}
+.dashboard-content .analytics-grid .workflow-overview {
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 16px;
+  min-height: 0;
+}
+.dashboard-content .workflow-overview .pipeline-stages {
+  gap: 10px;
+}
+.dashboard-content .workflow-overview .pipeline-stages button {
+  padding: 10px 14px;
+  gap: 4px 8px;
+}
+.dashboard-content .distribution {
+  min-height: 0;
+  padding: 20px 20px 0;
+}
+.dashboard-content .distribution .chart-heading .smallcaps {
+  display: none;
+}
+.dashboard-content .distribution .chart-heading h2 {
+  margin-top: 0;
+}
+.dashboard-content .distribution-content {
+  grid-template-columns: 126px minmax(0, 1fr);
+  padding: 12px 0;
+  gap: 20px;
+}
+.dashboard-content .distribution .donut {
+  width: 120px;
+  height: 120px;
+  padding: 14px;
+}
+.dashboard-content .distribution .donut > div > span {
+  font-size: 2rem;
+}
+.dashboard-content .distribution .legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 16px;
+}
+.dashboard-content .distribution .legend button {
+  padding: 4px 0;
+  gap: 6px;
+  min-height: 40px;
+}
+.dashboard-content .distribution .chart-footer {
+  padding: 10px 0;
+}
+.dashboard-content .queue-panel .panel-heading {
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+.dashboard-content .queue-panel .panel-heading .smallcaps,
+.dashboard-content .queue-panel .panel-heading p {
+  display: none;
+}
+.dashboard-content .queue-panel .panel-heading h2 {
+  margin: 0;
+}
+.dashboard-content .queue-panel .table-tools {
+  padding-top: 0;
+  padding-bottom: 12px;
+}
+.dashboard-content .queue-panel td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+@media (max-width: 1350px) {
+  .dashboard-content .distribution .legend {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .dashboard-content .distribution .legend button {
+    min-height: 32px;
+  }
+}
+@media (max-width: 1050px) {
+  .dashboard-content .analytics-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dashboard-content .distribution .legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-content .distribution-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dashboard-content .distribution .legend {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .dashboard-content .distribution .legend button {
+    min-height: 44px;
+  }
+}

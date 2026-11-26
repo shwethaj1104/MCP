@@ -1,0 +1,46 @@
+/* Reduce dashboard typography one step without changing other workspace screens. */
+.dashboard-content > .heading h1 {
+  font-size: clamp(1.625rem, 1.9vw, 2.125rem);
+}
+.dashboard-content .metric strong {
+  font-size: 2.125rem;
+}
+.dashboard-content .pipeline-label strong,
+.dashboard-content .queue-panel .panel-heading h2 {
+  font-size: 1.25rem;
+}
+.dashboard-content .pipeline-label small,
+.dashboard-content .queue-panel .panel-heading p,
+.dashboard-content .queue-panel .queue-refresh,
+.dashboard-content .queue-panel .tabs button,
+.dashboard-content .queue-panel .table-footer,
+.dashboard-content .pagination-controls > button {
+  font-size: .875rem;
+}
+.dashboard-content .journey-caption strong,
+.dashboard-content .queue-panel td,
+.dashboard-content .queue-panel .case-link,
+.dashboard-content .queue-panel td.amount {
+  font-size: .9375rem;
+}
+.dashboard-content .journey-count,
+.dashboard-content .journey-caption small,
+.dashboard-content .workflow-journey-footer {
+  font-size: .75rem;
+}
+.dashboard-content .queue-panel th,
+.dashboard-content .queue-panel td small,
+.dashboard-content .queue-panel .case-identity small,
+.dashboard-content .queue-panel .badge,
+.dashboard-content .queue-panel .pill {
+  font-size: .8125rem;
+}
+.dashboard-content .queue-panel .search input,
+.dashboard-content .pagination-controls .select-trigger {
+  font-size: .9375rem;
+}
+@media (max-width: 600px) {
+  .dashboard-content .queue-panel .search input {
+    font-size: 1rem;
+  }
+}
