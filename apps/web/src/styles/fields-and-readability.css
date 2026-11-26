@@ -1,0 +1,454 @@
+/* Consistent form menus and legible case-workflow typography at every breakpoint. */
+.custom-select {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  min-width: 0;
+}
+.dispute-modal .select-trigger {
+  width: 100%;
+  min-height: 72px;
+  padding: 13px 16px;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  text-align: left;
+  box-shadow: none;
+}
+.dispute-modal .select-trigger:hover,
+.dispute-modal .select-trigger.is-open {
+  border-color: #aaa;
+  background: #f7f7f7;
+  transform: none;
+}
+.select-value {
+  display: block;
+  min-width: 0;
+  flex: 1;
+}
+.select-value > strong {
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 1.5;
+  color: #333;
+  overflow-wrap: anywhere;
+  display: block;
+}
+.select-value > small {
+  font-size: 13px;
+  font-weight: 450;
+  color: #888;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+.select-trigger > svg {
+  flex-shrink: 0;
+  color: #888;
+  transition: transform 0.18s;
+}
+.select-trigger.is-open > svg {
+  transform: rotate(180deg);
+}
+.select-popover {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 11px;
+  box-shadow:
+    0 10px 28px #00000016,
+    0 2px 5px #00000008;
+  padding: 6px;
+  z-index: 8;
+  animation: profile-menu-enter 0.16s ease-out;
+}
+.select-popover.opens-above {
+  top: auto;
+  bottom: calc(100% + 7px);
+}
+.select-options {
+  position: relative;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  min-height: 64px;
+  padding: 11px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: #fff;
+}
+.select-option.is-active {
+  background: #f2f2f2;
+  border-color: #e4e4e4;
+}
+.select-option > span:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.select-option strong {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  display: block;
+  color: #333;
+  overflow-wrap: anywhere;
+}
+.select-option small {
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 3px;
+}
+.select-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  color: #fff;
+  border-radius: 50%;
+}
+.select-option.is-selected .select-check {
+  background: #292929;
+}
+.progress {
+  padding: 26px 27px 23px;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.progress > div {
+  min-width: 0;
+}
+.progress > div > span {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.progress > div > span > svg {
+  width: 16px;
+  height: 16px;
+}
+.progress > div:after {
+  top: 17px;
+  left: 35px;
+  right: -14px;
+}
+.progress small,
+.progress .reached small {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 175px;
+  margin-top: 14px;
+  font-weight: 550;
+  color: #858585;
+  overflow-wrap: normal;
+}
+.progress .reached small {
+  color: #444;
+}
+.progress [aria-current="step"] small {
+  color: #222;
+  font-weight: 700;
+}
+.case-grid {
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+}
+.history-panel .panel-heading {
+  padding: 25px 24px 22px;
+}
+.history-panel .panel-heading h2 {
+  font-size: 20px;
+}
+.history-panel .timeline {
+  padding: 1px 25px 16px;
+  max-height: 560px;
+}
+.history-panel .timeline > div {
+  padding: 0 0 28px 20px;
+}
+.history-panel .timeline strong {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 650;
+}
+.history-panel .timeline small {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #888;
+  margin-top: 4px;
+}
+.history-panel .timeline p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #777;
+  margin-top: 9px;
+  overflow-wrap: anywhere;
+}
+.history-panel .timeline-dot {
+  width: 7px;
+  height: 7px;
+  top: 8px;
+  left: -4px;
+}
+.tools .panel-heading h2 {
+  font-size: 18px;
+}
+.tools summary {
+  font-size: 13px;
+  line-height: 1.6;
+  gap: 9px;
+}
+.tools details {
+  padding: 14px 20px;
+}
+.tools pre {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.tools > .muted {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.customer-statement-panel {
+  padding-bottom: 12px;
+}
+.customer-statement-panel .panel-heading {
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+.customer-statement-panel > .statement {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.detail-panel > .statement {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.detail-panel > p,
+.detail-panel > .check-line {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.detail-panel > details {
+  font-size: 13px;
+}
+.detail-panel summary {
+  padding: 8px 0;
+  font-size: 13px;
+}
+.history-report small {
+  font-size: 12px;
+}
+.history-report p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.case-header + .progress + .config {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.case-grid .decision > p {
+  font-size: 13px;
+}
+.case-grid .decision textarea {
+  font-size: 15px;
+}
+.case-grid .decision label {
+  font-size: 13px;
+}
+@media (min-width: 1700px) {
+  .progress {
+    padding: 29px 30px 25px;
+  }
+  .progress small {
+    font-size: 14px;
+    max-width: 210px;
+  }
+  .progress > div > span {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  .progress > div:after {
+    top: 18px;
+    left: 37px;
+  }
+  .case-grid {
+    grid-template-columns: minmax(0, 1fr) 395px;
+    gap: 26px;
+  }
+  .history-panel .timeline strong {
+    font-size: 15px;
+  }
+  .history-panel .timeline small {
+    font-size: 12px;
+  }
+  .history-panel .timeline p {
+    font-size: 14px;
+  }
+  .history-panel .timeline {
+    max-height: 610px;
+  }
+  .select-value > strong {
+    font-size: 17px;
+  }
+  .select-value > small {
+    font-size: 14px;
+  }
+  .select-option strong {
+    font-size: 16px;
+  }
+  .select-option small {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1200px) {
+  .progress small {
+    font-size: 12px;
+    max-width: 150px;
+  }
+  .progress {
+    gap: 13px;
+    padding: 22px;
+  }
+  .case-grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 20px;
+  }
+  .history-panel .timeline {
+    padding-inline: 22px;
+  }
+  .history-panel .timeline p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1000px) {
+  .progress {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 20px;
+    padding: 24px;
+  }
+  .progress > div:after {
+    right: -20px;
+  }
+  .progress > div:nth-child(3):after {
+    display: none;
+  }
+  .progress small {
+    font-size: 13px;
+    max-width: none;
+    margin-top: 12px;
+  }
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+  .history-panel .timeline {
+    max-height: 480px;
+  }
+  .history-panel .timeline p {
+    font-size: 14px;
+  }
+  .history-panel .timeline small {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .dispute-modal .select-trigger {
+    min-height: 72px;
+    padding: 12px 13px;
+  }
+  .select-value > strong {
+    font-size: 16px;
+  }
+  .select-value > small {
+    font-size: 13px;
+  }
+  .select-option {
+    padding: 10px;
+    min-height: 62px;
+    gap: 9px;
+  }
+  .select-option strong {
+    font-size: 15px;
+  }
+  .select-option small {
+    font-size: 12px;
+  }
+  .progress {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 17px;
+    padding: 22px 18px;
+  }
+  .progress > div:after {
+    right: -17px;
+    display: block;
+  }
+  .progress > div:nth-child(3):after {
+    display: block;
+  }
+  .progress > div:nth-child(2n):after {
+    display: none;
+  }
+  .progress small {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .progress > div > span {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  .progress > div:after {
+    top: 16px;
+    left: 33px;
+  }
+  .history-panel .panel-heading {
+    padding: 22px 20px 18px;
+  }
+  .history-panel .panel-heading h2 {
+    font-size: 19px;
+  }
+  .history-panel .timeline {
+    padding-inline: 21px;
+    max-height: 520px;
+  }
+  .history-panel .timeline strong {
+    font-size: 14px;
+  }
+  .history-panel .timeline small {
+    font-size: 12px;
+  }
+  .history-panel .timeline p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .detail-panel > .statement {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .select-popover,
+  .select-trigger > svg {
+    animation: none !important;
+    transition: none !important;
+  }
+}

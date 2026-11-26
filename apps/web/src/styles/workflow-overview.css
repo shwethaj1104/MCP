@@ -1,0 +1,62 @@
+.analytics-grid .workflow-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 26px;
+  gap: 24px;
+  min-width: 0;
+}
+.workflow-overview .pipeline-label {
+  width: auto;
+  border: 0;
+  padding: 0;
+}
+.workflow-overview .pipeline-label strong {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.workflow-overview .pipeline-label small {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.workflow-overview .pipeline-stages {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 0;
+  padding: 0;
+  gap: 12px;
+}
+.workflow-overview .pipeline-stages button {
+  padding: 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background: #fafafa;
+  gap: 8px;
+}
+.workflow-overview .pipeline-stage-number {
+  font-size: 0.6875rem;
+}
+.workflow-overview .pipeline-stage-title {
+  font-size: 0.8125rem;
+  white-space: normal;
+  line-height: 1.5;
+}
+.workflow-overview .pipeline-stages strong {
+  font-size: 1.375rem;
+}
+.workflow-overview .pipeline-stages button > svg,
+.workflow-overview .pipeline-stages .occupied::before {
+  display: none;
+}
+.workflow-overview .pipeline-stages button:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+@media (max-width: 600px) {
+  .workflow-overview .pipeline-stages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .analytics-grid .workflow-overview {
+    padding: 20px;
+  }
+}

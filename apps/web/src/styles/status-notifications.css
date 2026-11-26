@@ -1,0 +1,323 @@
+/* Operational status, recovery action and toast notifications share one clear hierarchy. */
+.case-toolbar .case-reference {
+  font-size: 11px;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+.case-toolbar .case-reference strong {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #444;
+  font-variant-numeric: tabular-nums;
+}
+.case-status-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.case-title-row .case-status-actions .badge {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 11px 13px;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.case-title-row .case-status-actions .badge > svg {
+  width: 16px;
+  height: 16px;
+}
+.case-retry {
+  min-height: 43px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #444;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.case-retry:hover {
+  border-color: #999;
+  background: #f7f7f7;
+}
+.case-retry:disabled {
+  cursor: wait;
+}
+.error-toast {
+  position: fixed;
+  top: 100px;
+  right: 24px;
+  z-index: 30;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  width: min(440px, calc(100vw - 32px));
+  padding: 19px 17px;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 13px;
+  box-shadow:
+    0 12px 38px #00000020,
+    0 2px 6px #00000008;
+  animation: toast-enter 0.25s ease-out;
+}
+.toast-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  color: #333;
+  background: #f1f1f1;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.error-toast > div {
+  min-width: 0;
+  flex: 1;
+}
+.error-toast strong {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.15px;
+  font-weight: 700;
+  color: #333;
+}
+.error-toast p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+  margin: 7px 0 0;
+  overflow-wrap: anywhere;
+}
+.error-toast > button {
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  min-width: 27px;
+  min-height: 27px;
+  color: #888;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.error-toast > button:hover {
+  background: #f2f2f2;
+  color: #222;
+}
+.queue-refresh {
+  font-size: 11px;
+  font-weight: 550;
+  padding: 8px 11px;
+  color: #777;
+  border: 1px solid #e5e5e5;
+  background: white;
+  gap: 7px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.queue-refresh:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+@keyframes toast-enter {
+  from {
+    opacity: 0;
+    transform: translateX(12px) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+@media (max-width: 1200px) {
+  .case-title-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .case-status-actions {
+    gap: 9px;
+  }
+  .case-toolbar .case-reference strong {
+    font-size: 15px;
+  }
+  .case-title-row .case-status-actions .badge {
+    font-size: 12px;
+    padding: 10px 11px;
+  }
+  .case-retry {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 650px) {
+  .case-toolbar .case-reference {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .case-toolbar .case-reference strong {
+    font-size: 14px;
+  }
+  .case-status-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .case-title-row .case-status-actions .badge {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .case-retry {
+    font-size: 12px;
+    padding: 10px;
+    min-height: 41px;
+  }
+  .error-toast {
+    top: 92px;
+    right: 12px;
+    width: calc(100vw - 24px);
+    padding: 16px 13px;
+    gap: 10px;
+  }
+  .error-toast strong {
+    font-size: 13px;
+  }
+  .error-toast p {
+    font-size: 12px;
+  }
+  .toast-icon {
+    width: 31px;
+    height: 31px;
+  }
+  .queue-refresh {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .error-toast {
+    animation: none !important;
+  }
+}
+.case-refresh {
+  margin-left: auto;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  color: #888;
+  background: #fff;
+}
+.case-refresh:hover {
+  background: #f6f6f6;
+  color: #333;
+}
+.sample-label + .case-refresh {
+  margin-left: 0;
+}
+@media (max-width: 580px) {
+  .case-toolbar .case-reference {
+    margin-left: 0;
+  }
+  .case-refresh {
+    margin-left: auto;
+  }
+}
+/* Keep the case label and live reference visually synchronized. */
+.case-toolbar .case-reference {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 650;
+  letter-spacing: 0.1px;
+  color: #444;
+  white-space: nowrap;
+}
+.case-toolbar .case-reference strong {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 650px) {
+  .case-toolbar .case-reference {
+    font-size: 14px;
+    gap: 6px;
+  }
+}
+/* A quiet status light replaces the rotating AI-review loader. */
+.badge .status-signal {
+  display: inline-block;
+  position: relative;
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  min-height: 7px;
+  margin: 0 3px 0 1px;
+  background: #555;
+  border-radius: 50%;
+  flex-shrink: 0;
+  isolation: isolate;
+}
+.badge .status-signal.is-active:after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  animation: status-signal-pulse 2.6s ease-out infinite;
+  pointer-events: none;
+}
+.badge .status-signal.is-paused {
+  background: #999;
+  box-shadow: 0 0 0 3px #ededed;
+}
+.case-status-summary .badge {
+  letter-spacing: 0;
+}
+@keyframes status-signal-pulse {
+  0% {
+    opacity: 0.45;
+    transform: scale(0.65);
+  }
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge .status-signal.is-active:after {
+    animation: none !important;
+    opacity: 0.2;
+    transform: none;
+  }
+}
+/* Failed AI reviews never retain a live processing signal or a completed-stage check. */
+.badge .status-signal.is-failed {
+  background: #444;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px #ececec;
+}
+.badge .status-signal.is-queued {
+  background: transparent;
+  border: 1.5px solid #999;
+  box-shadow: none;
+}
+.progress .stage-failed > span {
+  background: #fff;
+  color: #333;
+  border: 2px solid #555;
+  box-shadow: 0 0 0 4px #f2f2f2;
+}
+.progress .stage-failed small {
+  font-weight: 750;
+  color: #333;
+}

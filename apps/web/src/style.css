@@ -1,0 +1,23 @@
+/* Ordered foundations, monochrome theme, components, and responsive motion. */
+@import "./styles/foundation-1.css";
+@import "./styles/foundation-2.css";
+@import "./styles/shell.css";
+@import "./styles/overview.css";
+@import "./styles/workspaces.css";
+@import "./styles/responsive.css";
+@import "./styles/transactions.css";
+@import "./styles/refinements.css";
+@import "./styles/identity-switcher.css";
+@import "./styles/dispute-form.css";
+@import "./styles/fields-and-readability.css";
+@import "./styles/status-notifications.css";
+@import "./styles/tool-activity.css";
+@import "./styles/workflow-overview.css";
+@import "./styles/dashboard-readability.css";
+@import "./styles/dashboard-density.css";
+@import "./styles/distribution-modern.css";
+@import "./styles/dashboard-focus.css";
+@import "./styles/workflow-journey.css";
+@import "./styles/dashboard-type-scale.css";
+@import "./styles/case-search.css";
+@import "./styles/workspace-polish.css";

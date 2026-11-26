@@ -1,0 +1,316 @@
+/* Transaction and activity workspaces reuse the same monochrome vocabulary. */
+.transaction-summary {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.8fr;
+  gap: 30px;
+  padding: 27px;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 13px;
+  margin-bottom: 23px;
+  animation: panel-enter 0.4s both;
+}
+.transaction-summary > div:not(:first-child) {
+  padding-left: 25px;
+  border-left: 1px solid #eee;
+}
+.transaction-summary .smallcaps {
+  font-size: 7px;
+  letter-spacing: 1.4px;
+  color: #999;
+  display: block;
+  margin-bottom: 12px;
+}
+.transaction-summary strong {
+  font-size: 25px;
+  letter-spacing: -1px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.transaction-summary strong > svg {
+  color: #aaa;
+}
+.transaction-summary small {
+  font-size: 8px;
+  color: #999;
+  margin-top: 7px;
+}
+.ledger-intro {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+.ledger-emblem {
+  width: 55px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #373737, #1d1d1d);
+  color: #eee;
+  border-radius: 12px;
+  box-shadow: 0 6px 13px #00000010;
+  flex-shrink: 0;
+}
+.ledger-intro h2 {
+  font-size: 25px;
+  font-weight: 550;
+  letter-spacing: -1px;
+}
+.ledger-intro h2 > span {
+  font-size: 10px;
+  letter-spacing: 0;
+  color: #999;
+}
+.ledger-intro p {
+  font-size: 8px;
+  color: #999;
+  margin: 7px 0 0;
+}
+.merchant-initial {
+  width: 33px;
+  height: 35px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  background: #f4f4f4;
+  color: #777;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 750;
+}
+.account-ref {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #999;
+  font-size: 9px;
+}
+.transaction-panel .case-identity strong {
+  font-size: 10px;
+  font-weight: 650;
+}
+.register-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 23px;
+}
+.register-list {
+  padding: 0 24px;
+}
+.register-entry {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-radius: 0;
+  padding: 23px 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  text-align: left;
+  background: white;
+}
+.register-entry:hover {
+  background: #fafafa;
+}
+.register-date {
+  min-width: 28px;
+  text-align: center;
+}
+.register-date strong {
+  font-size: 21px;
+  color: #777;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.register-date small {
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+.register-marker {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  color: #888;
+  flex-shrink: 0;
+}
+.register-text {
+  flex: 1;
+}
+.register-text h3 {
+  font-size: 12px;
+  font-weight: 650;
+  margin: 5px 0 4px;
+  letter-spacing: -0.3px;
+}
+.register-text small {
+  font-size: 8px;
+  color: #999;
+}
+.register-index {
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+.register-entry > svg {
+  color: #999;
+  margin-left: 6px;
+}
+.register-aside {
+  padding: 27px;
+  background: radial-gradient(ellipse at 100% 0, #444, #232323 65%);
+  border-radius: 13px;
+  color: #eee;
+  align-self: start;
+  border: 1px solid #303030;
+  animation: panel-enter 0.5s 0.1s both;
+}
+.register-aside .capsule {
+  font-size: 6px;
+  gap: 6px;
+}
+.register-aside h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  margin: 26px 0 15px;
+}
+.register-aside h2 > span {
+  color: #999;
+}
+.register-aside > p {
+  font-size: 10px;
+  color: #aaa;
+  line-height: 1.9;
+}
+.register-callout {
+  border-top: 1px solid #494949;
+  padding-top: 20px;
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 9px;
+  color: #ccc;
+}
+.register-callout small {
+  color: #999;
+  font-size: 8px;
+  margin-top: 3px;
+}
+.modal-kicker {
+  font-size: 7px;
+  color: #aaa;
+  letter-spacing: 1.6px;
+  margin-top: 24px;
+}
+.modal-kicker + h2 {
+  margin-top: 10px;
+}
+.form-assurance {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  color: #999;
+  margin: 22px 0 0;
+}
+.form-assurance + .wide {
+  margin-top: 13px;
+}
+@media (max-width: 1100px) {
+  .transaction-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .ledger-intro {
+    grid-column: 1/3;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+  }
+  .transaction-summary > div:nth-child(2) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .register-layout {
+    grid-template-columns: 1fr;
+  }
+  .register-aside {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .transaction-summary {
+    padding: 20px;
+    gap: 15px;
+  }
+  .transaction-summary strong {
+    font-size: 20px;
+  }
+  .transaction-summary .smallcaps {
+    font-size: 6px;
+  }
+  .transaction-summary small {
+    font-size: 7px;
+  }
+  .transaction-summary > div:not(:first-child) {
+    padding-left: 15px;
+  }
+  .transaction-summary > div:nth-child(2) {
+    padding-left: 0;
+  }
+  .ledger-intro {
+    gap: 11px;
+  }
+  .ledger-emblem {
+    width: 43px;
+    height: 51px;
+  }
+  .ledger-intro h2 {
+    font-size: 22px;
+  }
+  .ledger-intro h2 > span {
+    font-size: 8px;
+  }
+  .ledger-intro p {
+    font-size: 7px;
+  }
+  .register-list {
+    padding-inline: 17px;
+  }
+  .register-entry {
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+  .register-entry .badge {
+    margin-left: 77px;
+  }
+  .register-entry > svg {
+    margin-left: auto;
+  }
+  .register-text h3 {
+    font-size: 11px;
+  }
+  .register-marker {
+    width: 31px;
+    height: 31px;
+  }
+  .register-text {
+    min-width: 100px;
+  }
+  .register-date {
+    min-width: 23px;
+  }
+  .register-entry {
+    padding: 20px 0;
+  }
+  .transaction-panel .case-identity strong {
+    font-size: 9px;
+  }
+}

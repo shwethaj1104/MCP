@@ -1,0 +1,778 @@
+@keyframes panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes orbital-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes breathe {
+  50% {
+    box-shadow:
+      0 0 45px #ffffff17,
+      inset 0 1px 0 #ffffff35;
+  }
+}
+@keyframes float-node {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes donut-enter {
+  from {
+    opacity: 0;
+    transform: rotate(-120deg) scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-90deg) scale(1);
+  }
+}
+@media (min-width: 1700px) {
+  .content {
+    padding: 35px 44px 24px;
+  }
+  .heading {
+    margin-bottom: 32px;
+  }
+  .metric {
+    padding: 24px 26px 19px;
+  }
+  .metric strong {
+    font-size: 45px;
+  }
+  .metric > div {
+    font-size: 12px;
+  }
+  .metric p {
+    font-size: 10px;
+  }
+  .metric-tag {
+    font-size: 7px;
+  }
+  .analytics-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+  .spotlight-body {
+    grid-template-columns: 1fr 245px;
+    min-height: 245px;
+  }
+  .spotlight-body h2 {
+    font-size: 42px;
+  }
+  .spotlight-body p {
+    font-size: 11px;
+    max-width: 340px;
+  }
+  .orbit-art {
+    width: 230px;
+    height: 230px;
+  }
+  .orbit-one {
+    width: 210px;
+    height: 210px;
+  }
+  .orbit-two {
+    width: 164px;
+    height: 164px;
+  }
+  .orbit-three {
+    width: 120px;
+    height: 120px;
+  }
+  .orbit-core {
+    width: 90px;
+    height: 90px;
+  }
+  .distribution-content {
+    grid-template-columns: 185px 1fr;
+    padding: 28px 5px;
+    gap: 35px;
+  }
+  .donut {
+    width: 180px;
+    height: 180px;
+    padding: 23px;
+  }
+  .donut > div > span {
+    font-size: 39px;
+  }
+  .legend button {
+    font-size: 11px;
+    padding: 8px 0;
+  }
+  .chart-heading h2 {
+    font-size: 20px;
+  }
+  .pipeline {
+    padding: 23px 26px;
+  }
+  .pipeline-stage-title {
+    font-size: 10px;
+  }
+  .pipeline-stages strong {
+    font-size: 12px;
+  }
+  .pipeline-label strong {
+    font-size: 12px;
+  }
+  th {
+    font-size: 10px;
+  }
+  td,
+  .case-link,
+  .amount {
+    font-size: 12px;
+  }
+  .badge {
+    font-size: 9px;
+  }
+  .case-identity small {
+    font-size: 10px;
+  }
+  .table-footer {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1250px) {
+  .sidebar {
+    width: 215px;
+    padding-inline: 16px;
+  }
+  main {
+    margin-left: 215px;
+    width: calc(100% - 215px);
+  }
+  .content {
+    padding: 26px;
+  }
+  .topbar {
+    padding: 0 26px;
+  }
+  .brand {
+    font-size: 23px;
+    padding-inline: 6px;
+  }
+  .workspace-switch {
+    padding: 10px 7px;
+    gap: 7px;
+  }
+  .workspace-switch > span:nth-child(2) {
+    font-size: 9px;
+  }
+  .analytics-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 17px;
+  }
+  .spotlight-body {
+    grid-template-columns: 1fr 130px;
+    min-height: 230px;
+  }
+  .orbit-art {
+    width: 140px;
+    height: 170px;
+  }
+  .orbit-one {
+    width: 135px;
+    height: 135px;
+  }
+  .orbit-two {
+    width: 105px;
+    height: 105px;
+  }
+  .orbit-three {
+    width: 78px;
+    height: 78px;
+  }
+  .orbit-core {
+    width: 60px;
+    height: 60px;
+  }
+  .orbit-core > svg {
+    width: 43px;
+  }
+  .node-one {
+    right: 1px;
+  }
+  .node-two {
+    left: 0;
+  }
+  .orbit-caption {
+    font-size: 5px;
+  }
+  .distribution {
+    padding: 20px 19px 0;
+  }
+  .distribution-content {
+    grid-template-columns: 120px 1fr;
+    gap: 15px;
+  }
+  .donut {
+    width: 115px;
+    height: 115px;
+    padding: 15px;
+  }
+  .donut > div > span {
+    font-size: 27px;
+  }
+  .pipeline {
+    gap: 17px;
+    padding: 18px;
+  }
+  .pipeline-label {
+    min-width: 135px;
+    gap: 8px;
+  }
+  .pipeline-label strong {
+    font-size: 9px;
+  }
+  .pipeline-label small {
+    font-size: 7px;
+  }
+  .pipeline-icon {
+    width: 29px;
+    height: 31px;
+  }
+  .pipeline-stages {
+    padding-left: 16px;
+    gap: 9px;
+  }
+  .pipeline-stage-title {
+    font-size: 7px;
+  }
+  .heading-actions {
+    gap: 6px;
+  }
+  .date-chip {
+    font-size: 8px;
+    padding: 9px;
+  }
+  .export-button {
+    font-size: 8px;
+    padding: 9px;
+  }
+  .metric {
+    padding: 18px;
+  }
+  .metric > div {
+    font-size: 9px;
+  }
+  .metric p {
+    font-size: 8px;
+  }
+  .metric-tag {
+    font-size: 5px;
+  }
+  .legend button {
+    font-size: 8px;
+  }
+  .chart-footer {
+    font-size: 7px;
+  }
+  .chart-footer strong {
+    font-size: 10px;
+  }
+  .spotlight-body p {
+    font-size: 8px;
+  }
+  .sidebar-system {
+    font-size: 8px;
+  }
+  .case-grid {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+}
+@media (max-width: 1000px) {
+  .analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .spotlight-body {
+    grid-template-columns: 1fr;
+  }
+  .orbit-art {
+    display: none;
+  }
+  .spotlight-body p {
+    max-width: 100%;
+    font-size: 9px;
+  }
+  .spotlight-body h2 {
+    font-size: 30px;
+  }
+  .review-spotlight {
+    padding: 20px 20px 0;
+  }
+  .distribution-content {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 18px 0;
+  }
+  .donut {
+    margin: auto;
+    width: 115px;
+    height: 115px;
+  }
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 12px;
+  }
+  .legend button {
+    font-size: 7px;
+  }
+  .legend strong {
+    font-size: 8px;
+  }
+  .chart-footer {
+    padding: 13px 0;
+  }
+  .pipeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .pipeline-stages {
+    border-left: 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0 3px;
+  }
+  .pipeline-label {
+    min-width: 0;
+  }
+  .heading {
+    align-items: flex-start;
+  }
+  .heading-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heading-actions > .primary {
+    font-size: 9px;
+  }
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+  .metric strong {
+    font-size: 33px;
+  }
+  .metric-tag {
+    letter-spacing: 0.6px;
+  }
+  .metrics {
+    gap: 10px;
+  }
+  .metric {
+    padding: 16px 13px;
+  }
+  .metric > div > svg {
+    width: 13px;
+  }
+  .spotlight-top > svg {
+    width: 16px;
+  }
+  .capsule {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+}
+@media (max-width: 800px) {
+  .sidebar {
+    width: 69px;
+    padding: 25px 11px;
+  }
+  .brand {
+    font-size: 0;
+    gap: 0;
+    padding: 0 6px;
+  }
+  .brandmark {
+    width: 32px;
+  }
+  .workspace-switch,
+  .workspace-label,
+  .side-note,
+  .side-bottom,
+  .sidebar-system {
+    display: none;
+  }
+  .sidebar nav {
+    margin-top: 35px;
+  }
+  .nav {
+    font-size: 0;
+    padding: 13px;
+    gap: 0;
+  }
+  .nav svg {
+    flex-shrink: 0;
+  }
+  .nav.active:before {
+    left: -11px;
+  }
+  .nav .count {
+    display: none;
+  }
+  main {
+    margin-left: 69px;
+    width: calc(100% - 69px);
+  }
+  .topbar {
+    height: 65px;
+    padding: 0 20px;
+  }
+  .content {
+    padding: 23px 20px;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .metric {
+    padding: 18px;
+  }
+  .metric > div {
+    font-size: 10px;
+  }
+  .metric p {
+    font-size: 8px;
+  }
+  .metric strong {
+    font-size: 37px;
+  }
+  .metric-tag {
+    font-size: 6px;
+  }
+  .config {
+    font-size: 9px;
+    line-height: 1.8;
+  }
+  .heading h1 {
+    font-size: 28px;
+  }
+  .heading {
+    gap: 12px;
+  }
+  .heading p {
+    font-size: 10px;
+  }
+  .heading-actions {
+    flex-direction: row;
+  }
+  .date-chip {
+    display: none;
+  }
+  .export-button {
+    font-size: 9px;
+  }
+  .demo {
+    display: none;
+  }
+  .pipeline-stage-title {
+    font-size: 8px;
+  }
+  .analytics-grid {
+    gap: 14px;
+  }
+  .distribution .chart-heading h2 {
+    font-size: 15px;
+  }
+  .chart-heading .smallcaps {
+    font-size: 5px;
+  }
+  .table-tools {
+    padding-inline: 18px;
+  }
+  .panel-heading {
+    padding: 22px 18px 18px;
+  }
+  .table-footer {
+    padding-inline: 18px;
+  }
+  .top-right {
+    gap: 10px;
+  }
+  .progress {
+    padding: 16px 12px;
+  }
+  .progress small {
+    font-size: 7px;
+  }
+  .queue-panel .table-tools {
+    gap: 12px;
+  }
+  .search {
+    width: 100%;
+  }
+  .search input {
+    width: 100%;
+  }
+  .table-tools {
+    flex-wrap: wrap;
+  }
+  .modal h2 {
+    font-size: 25px;
+  }
+  .modal {
+    padding: 27px;
+  }
+}
+@media (max-width: 580px) {
+  .content {
+    padding: 19px 15px;
+  }
+  .heading {
+    flex-direction: column;
+    gap: 17px;
+  }
+  .heading-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .heading-actions .primary {
+    width: 100%;
+  }
+  .heading h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+  .heading p {
+    max-width: 310px;
+  }
+  .metrics {
+    gap: 10px;
+  }
+  .metric {
+    padding: 16px 14px;
+  }
+  .metric > div {
+    font-size: 9px;
+  }
+  .metric strong {
+    font-size: 35px;
+  }
+  .metric p {
+    font-size: 7px;
+  }
+  .metric-tag {
+    font-size: 5px;
+    letter-spacing: 0.7px;
+  }
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .spotlight-body {
+    grid-template-columns: 1fr 100px;
+    min-height: 205px;
+  }
+  .spotlight-body h2 {
+    font-size: 31px;
+  }
+  .spotlight-body p {
+    font-size: 8px;
+  }
+  .orbit-art {
+    display: grid;
+    width: 115px;
+    height: 150px;
+    margin-left: -10px;
+  }
+  .orbit-one {
+    width: 115px;
+    height: 115px;
+  }
+  .orbit-two {
+    width: 90px;
+    height: 90px;
+  }
+  .orbit-three {
+    width: 65px;
+    height: 65px;
+  }
+  .orbit-core {
+    width: 51px;
+    height: 51px;
+  }
+  .orbit-core svg {
+    width: 38px;
+  }
+  .orbit-node {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+  }
+  .orbit-node svg {
+    width: 12px;
+  }
+  .node-one {
+    right: 0;
+    top: 21px;
+  }
+  .node-two {
+    left: 0;
+    bottom: 24px;
+  }
+  .orbit-caption {
+    font-size: 4px;
+  }
+  .spotlight-overline {
+    font-size: 5px;
+  }
+  .spotlight-action {
+    font-size: 8px;
+    gap: 10px;
+  }
+  .spotlight-bottom {
+    font-size: 6px;
+  }
+  .spotlight-bottom > span:last-child {
+    font-size: 5px;
+  }
+  .distribution-content {
+    grid-template-columns: 125px 1fr;
+    padding: 20px 0;
+    gap: 18px;
+  }
+  .legend {
+    display: flex;
+  }
+  .legend button {
+    font-size: 8px;
+  }
+  .chart-footer {
+    font-size: 8px;
+  }
+  .chart-footer strong {
+    font-size: 11px;
+  }
+  .distribution .chart-heading h2 {
+    font-size: 17px;
+  }
+  .chart-heading .smallcaps {
+    font-size: 6px;
+  }
+  .donut {
+    width: 125px;
+    height: 125px;
+  }
+  .pipeline-stages {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 12px;
+  }
+  .pipeline-stages button > svg {
+    display: none;
+  }
+  .pipeline-stage-title {
+    font-size: 9px;
+  }
+  .pipeline-stages strong {
+    font-size: 10px;
+  }
+  .pipeline-label strong {
+    font-size: 11px;
+  }
+  .pipeline-label small {
+    font-size: 8px;
+  }
+  .tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tabs button {
+    font-size: 8px;
+    padding: 7px 8px;
+  }
+  .panel-heading h2 {
+    font-size: 16px;
+  }
+  .panel-heading .smallcaps {
+    font-size: 5px;
+  }
+  .panel-heading > .muted {
+    font-size: 7px;
+    white-space: nowrap;
+  }
+  .table-footer {
+    font-size: 7px;
+  }
+  .progress small {
+    font-size: 6px;
+  }
+  .progress {
+    padding: 14px 10px;
+  }
+  .progress > div > span {
+    width: 23px;
+    height: 23px;
+  }
+  .progress > div:after {
+    top: 11px;
+    left: 23px;
+  }
+  .decision {
+    padding: 21px;
+  }
+  .decision h2 {
+    font-size: 19px;
+  }
+  .report-grid {
+    margin-inline: 18px;
+    padding: 17px;
+    gap: 13px;
+  }
+  .report-grid h3 {
+    font-size: 18px;
+  }
+  .modal-backdrop {
+    padding: 11px;
+  }
+  .modal {
+    padding: 25px;
+  }
+  .topbar {
+    padding: 0 15px;
+  }
+  .top-right select {
+    font-size: 9px;
+    max-width: 190px;
+  }
+  footer {
+    font-size: 6px;
+    gap: 12px;
+    letter-spacing: 0.8px;
+  }
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .donut {
+    transform: rotate(-90deg);
+  }
+}

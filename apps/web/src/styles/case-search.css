@@ -1,0 +1,95 @@
+.case-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 280px;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 5px 9px 5px 5px;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  background: #f8f8f8;
+  box-shadow: inset 0 1px 2px #00000003;
+  transition:
+    border-color 150ms,
+    background-color 150ms,
+    box-shadow 150ms;
+}
+.case-search-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #eaeaea;
+  color: #666;
+  transition:
+    background-color 150ms,
+    color 150ms;
+}
+.case-search:focus-within {
+  background: #fff;
+  border-color: #666;
+  box-shadow: 0 0 0 3px #00000008;
+}
+.case-search:focus-within .case-search-icon,
+.case-search.has-query .case-search-icon {
+  background: #292929;
+  color: white;
+}
+.case-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 0.9375rem;
+  color: #333;
+}
+.case-search input::placeholder {
+  color: #888;
+}
+.case-search kbd {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 24px;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 0.75rem;
+  color: #888;
+}
+.case-search .case-search-clear {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  flex-shrink: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: #777;
+}
+.case-search .case-search-clear:hover {
+  background: #eee;
+  color: #222;
+}
+@media (max-width: 700px) {
+  .case-search {
+    flex: 1;
+    width: auto;
+  }
+  .case-search input {
+    font-size: 1rem;
+  }
+  .case-search kbd {
+    display: none;
+  }
+}
